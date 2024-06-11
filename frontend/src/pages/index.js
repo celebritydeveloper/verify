@@ -70,7 +70,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const socket = io("http://localhost:4000");
+    const socket = io("https://verify.socialbooster.ai");
     
     socket.on("connect", () => {
       setSocket(socket);
