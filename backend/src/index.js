@@ -4,7 +4,7 @@ const http = require("http");
 const SocketService = require("./services/SocketService");
 const { Server } = require("socket.io")
 const cookieParser = require("cookie-parser");
-const app = express();
+const app = express()
 
 
 async function startServer() {
@@ -33,7 +33,7 @@ async function startServer() {
   module.export = io;
   
 
-  const port = process.env.PORT || 4000
+  const port = process.env.PORT || 5000
 
   server.listen(port, err => {
     if (err) {
