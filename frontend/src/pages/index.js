@@ -38,7 +38,7 @@ export default function Home() {
       }
 
       res.map((data) => {
-        if(data.priority <= 5 || data.priority === 0) {
+        if(data.priority <= 10 || data.priority === 0) {
           goodEmails.push(data);
           copyGoodEmails.push(data.email);
           setSuccessful([...successful, ...goodEmails]);
