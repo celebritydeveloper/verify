@@ -18,8 +18,9 @@ module.exports = (io, socket) => {
   
       try {
         dnsPromises.resolveMx(hostname).then(addresses => {
+          console.log(addresses);
           if (addresses && addresses.length > 0) {
-            const address = addresses.filter((address) => address.priority <= 5 || address.priority === 0);
+            const address = addresses.filter((address) => address.priority <= 10 || address.priority === 0);
             if(address.length == 0 || address.length > 0) {
               //console.log(address[0]);
               res({
